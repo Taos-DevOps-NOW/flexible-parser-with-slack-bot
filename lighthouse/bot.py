@@ -20,7 +20,7 @@ class Bot:
     """
 
     def __init__(self):
-        path = os.path.join(ROOT_DIR, "..", "config.yml")
+        path = os.path.join(ROOT_DIR, "..", "..", "config", "config.yml")
         variables = ConfigLoader(path)
 
         self.web_slack_client = WebClient(variables.config["SLACK_CLIENT_TOKEN"])

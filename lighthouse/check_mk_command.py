@@ -13,19 +13,22 @@ class CheckMkCommand(Command):
     def __init__(self):
         super().__init__()
 
-        variables = ConfigLoader('../config.yml')
+        variables = ConfigLoader("../../config/config.yml")
 
         self._api = WebApi(
-            variables.config['CHECK_MK_SERVER'],
-            username=variables.config['CHECK_MK_USER'],
-            secret=variables.config['CHECK_MK_PASSWORD'])
+            variables.config["CHECK_MK_SERVER"],
+            username=variables.config["CHECK_MK_USER"],
+            secret=variables.config["CHECK_MK_PASSWORD"],
+        )
 
-        self._check = 'This is a journey into Check Mk.'
-        self._command_name = 'Check Mk'
+        self._check = "This is a journey into Check Mk."
+        self._command_name = "Check Mk"
 
         # Add additional command functions and parsers here
-        self._commands.update({
-            'get': GetCommands(self._api),
-            'host': HostCommands(self._api),
-            'downtime': DowntimeCommands(self._api)
-        })
+        self._commands.update(
+            {
+                "get": GetCommands(self._api),
+                "host": HostCommands(self._api),
+                "downtime": DowntimeCommands(self._api),
+            }
+        )

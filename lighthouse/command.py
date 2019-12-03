@@ -21,7 +21,7 @@ class Command:
     """
 
     def __init__(self):
-        variables = ConfigLoader("../config.yml")
+        variables = ConfigLoader("../../config/config.yml")
 
         self._commands = {"ping": self._ping, "help": self._help}
         self._check = "This is a journey into sound."
