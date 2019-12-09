@@ -1,9 +1,9 @@
 import logging
 from inspect import getfullargspec, signature
-from configs.config_loader import ConfigLoader
 
 import yaml
 
+from configs.config_loader import ConfigLoader
 from lighthouse.format import FormatFor
 
 logging.basicConfig(format="%(levelname)s:%(message)s", level=logging.WARN)
@@ -19,7 +19,6 @@ class Command:
     """
     Takes commands and calls correct sub parsers
     """
-
     def __init__(self):
         variables = ConfigLoader("../../config/config.yml")
 
@@ -68,13 +67,11 @@ class Command:
         # This isn't a subparser,
         # and we didn't find a command with the correct number of arguments
         # so we will show the help text and return out of the command handler
-        results = " ".join(
-            [
-                "Sorry I don't understand the command: `%s`." % primary_command,
-                self.__help_text_args(string_parsed_commands),
-                self._help(),
-            ]
-        )
+        results = " ".join([
+            "Sorry I don't understand the command: `%s`." % primary_command,
+            self.__help_text_args(string_parsed_commands),
+            self._help(),
+        ])
 
         logging.debug(results)
 
@@ -102,7 +99,7 @@ class Command:
 
     def safe_call(self, function, *args):
         """
-        Safe call allows for command bases to ensure that the call 
+        Safe call allows for command bases to ensure that the call
         they make will not return an error.
 
         This also allows for handling of csv or json results
@@ -144,27 +141,29 @@ class Command:
         # if it is a method, check for arg length to match
 
         if hasattr(exec_command, "handle_command"):
-            logging.debug("recursive call to handle command %s", primary_command)
+            logging.debug("recursive call to handle command %s",
+                          primary_command)
             # this is a secondary command parser in its own right.
             # In this case, call the handle command method and start all
             # this again on its own parser.
 
             return self._commands[primary_command].handle_command(
-                " ".join(pass_through_commands)
-            )
+                " ".join(pass_through_commands))
 
         # Inspect the method and determine the number of arguments
         # the method takes
 
         calling_signature = len(parsed_arguments)
         method_signature = len(signature(exec_command).parameters)
-        required_signature = self.__get_number_of_required_arguments(exec_command)
+        required_signature = self.__get_number_of_required_arguments(
+            exec_command)
 
         # if there are no additional arguments passed,
         # execute the command and return the result
 
         if not parsed_arguments and method_signature == 0:
-            logging.debug("No pass through, execute directly %s", primary_command)
+            logging.debug("No pass through, execute directly %s",
+                          primary_command)
 
             if callable(exec_command):
                 return exec_command()
@@ -172,7 +171,8 @@ class Command:
         if method_signature == calling_signature:
             # additional arguments passed to the command, execute the
             # command with those arguments
-            logging.debug("cleaned commands match command sig %s", parsed_arguments)
+            logging.debug("cleaned commands match command sig %s",
+                          parsed_arguments)
 
             return exec_command(*parsed_arguments)
 
@@ -182,7 +182,8 @@ class Command:
         if required_signature <= calling_signature:
             # additional arguments passed to the command, execute the
             # command with those arguments
-            logging.debug("cleaned commands match command sig %s", parsed_arguments)
+            logging.debug("cleaned commands match command sig %s",
+                          parsed_arguments)
 
             return exec_command(*parsed_arguments)
 
