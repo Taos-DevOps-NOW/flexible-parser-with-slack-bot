@@ -4,36 +4,44 @@
 ## Deployment
 Slackbot is built to be deployed in a Docker container.
 
-There is a requirement that the `config.yml` is updated. This stores your Slack credentials.
+There is a requirement that the `config.yml` is mounted in a volume. This stores your Slack credentials.
 
-- Run `docker build` command to build a new container
-- Start env `docker run <docker image name>`
-- Profit
+- Run `docker build . -t 2k:slackbot` command to build a new container
+- Verify that you have copied `config.yml.example` to a folder and renamed the file to `config.yml`
+- Start server `docker run 2k:slackbot --name slacker --mount source=<pwd>,target=/opt/config/` where
+  pwd is the folder created above
 
 ## Quick start:
 
-Verify python version is at least 3.6
-`python --version`
+1. Verify python version is at least 3.6
+   `python --version`
 
-Verify or install `pipenv`
-`pip list | grep pipenv` or `pip install -g pipenv`
+2. Verify or install `pipenv`
+  `pip list | grep pipenv` or `pip install -g pipenv`
 
-Generate local virtualenv using pipenv.
-`pipenv --three`
+3. Generate local virtualenv using pipenv.
+  `pipenv --three`
 
-Activate env
-`pipenv shell`
+4. Activate env
+  `pipenv shell`
 
-Install pip packages
-`pipenv install`
+5. Install pip packages
+  `pipenv install`
+
+6. Create config directory:
+  `mkdir ../config`
+
+7. Copy config file
+  `cp config.yml.example ../config/config.yml`
+
+
+### OR
+
+- run `bin/quickstart.sh`
 
 
 ## Use of Environment variables
-Lighthouse uses Environment variables to pull slack token and the slack
-Lighthouse name. Currently the use of `SLACK_CLIENT_TOKEN` and `SLACK_CLIENT_NAME`
-as the two variables. For development use of [direnv](https://github.com/direnv/direnv)
-is suggested for development.
-
+Lighthouse uses a yml configuration document for its token and auth information.
 
 Lighthouse also uses CheckMk variables:
     CHECK_MK_SERVER=http://testing.host/master_dev/check_mk/webapi.py
