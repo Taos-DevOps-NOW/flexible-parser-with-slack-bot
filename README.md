@@ -54,8 +54,9 @@ To tail the logs for a given docker container, even a stopped container:
 Container IDs can be found by `docker ps -a` and looking for `taos:slackbot`
 
 
-## Use of Environment variables
-Lighthouse uses a yml configuration document for its token and auth information.
+## Use of config values
+Lighthouse uses a yml configuration document for its token and auth information. The file
+should be in `../config/config.yml` or wherever you specify the mount.
 
 Lighthouse also uses CheckMk variables:
     CHECK_MK_SERVER=http://testing.host/master_dev/check_mk/webapi.py
