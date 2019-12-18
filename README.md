@@ -6,9 +6,9 @@ Slackbot is built to be deployed in a Docker container.
 
 There is a requirement that the `config.yml` is mounted in a volume. This stores your Slack credentials.
 
-- Run `docker build . -t 2k:slackbot` command to build a new container
+- Run `docker build . -t taoso:slackbot` command to build a new container
 - Verify that you have copied `config.yml.example` to a folder and renamed the file to `config.yml`
-- Start server `docker run 2k:slackbot --name slacker --mount source=<pwd>,target=/opt/config/` where
+- Start server `docker run taos:slackbot --name slacker --mount source=<pwd>,target=/opt/config/` where
   pwd is the folder created above
 
 ## Quick start:
@@ -38,6 +38,23 @@ There is a requirement that the `config.yml` is mounted in a volume. This stores
 ### OR
 
 - run `bin/quickstart.sh`
+
+Quickstart will build everything you need but will not start correctly as it copies 
+over the default `config.yml.example` that does not provide a valid slackbot name or token.
+
+Alter the `config/config.yml` file to include the name and token provided for your bot.
+
+
+## Docker Notes
+
+To see the logs for a given docker container:
+`docker logs -f <container id>`
+
+
+Container IDs can be found by `docker ps -a` and looking for `taos:slackbot`
+
+
+
 
 
 ## Use of Environment variables

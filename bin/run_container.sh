@@ -5,4 +5,4 @@ docker rm slackbot
 
 docker run -d -it --name slackbot \
   --mount type=bind,source=${CONFIG_PATH},target=/opt/slack/config/,readonly \
-  2k:slackbot
+  taos:slackbot
