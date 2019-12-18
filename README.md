@@ -47,14 +47,11 @@ Alter the `config/config.yml` file to include the name and token provided for yo
 
 ## Docker Notes
 
-To see the logs for a given docker container:
+To tail the logs for a given docker container, even a stopped container:
 `docker logs -f <container id>`
 
 
 Container IDs can be found by `docker ps -a` and looking for `taos:slackbot`
-
-
-
 
 
 ## Use of Environment variables
