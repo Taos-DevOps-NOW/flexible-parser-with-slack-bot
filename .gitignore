@@ -15,6 +15,7 @@ pytest.ini
 .envrc
 
 */__pycache__/
+**.pyc
 
 # Coverage Files
 .coverage
@@ -29,3 +30,4 @@ config.yml
 
 .idea
 venv/
+.venv
