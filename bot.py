@@ -42,4 +42,5 @@ def wait_for_event(**event):
 
 
 # listen for commands
-listener.rtm_slack_client.start()
+if __name__ == "__main__":
+    listener.rtm_slack_client.start()

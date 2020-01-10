@@ -19,13 +19,13 @@ class Bot:
     Check MK
     """
 
-    def __init__(self):
+    def __init__(self, bot_name=None):
         path = os.path.join(ROOT_DIR, "..", "..", "config", "config.yml")
         variables = ConfigLoader(path)
 
         self.web_slack_client = WebClient(variables.config["SLACK_CLIENT_TOKEN"])
         self.rtm_slack_client = RTMClient(token=variables.config["SLACK_CLIENT_TOKEN"])
-        self.bot_name = variables.config["SLACK_CLIENT_NAME"]
+        self.bot_name = bot_name or variables.config["SLACK_CLIENT_NAME"]
         self.bot_id = self._get_bot_id()
         self.valid = self.valid_slack_bot()
 

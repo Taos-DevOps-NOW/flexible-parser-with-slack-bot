@@ -48,7 +48,7 @@ class Command:
         if not arg_defaults:
             arg_defaults = []
 
-        return len(all_args) - len(arg_defaults)
+        return len([ arg for arg in all_args if arg !="self"]) - len(arg_defaults)
 
     def __get_parsed_arguments(self, commands):
         commands = " ".join(commands)
@@ -121,8 +121,7 @@ class Command:
 
         # Grab primary command request
         # Stash rest of arguments for future use
-        pass_through_commands = command.split(" ")
-        primary_command = pass_through_commands.pop(0)
+        primary_command, *pass_through_commands = command.split(" ")
 
         parsed_arguments = self.__get_parsed_arguments(pass_through_commands)
 
@@ -184,7 +183,9 @@ class Command:
             # command with those arguments
             logging.debug("cleaned commands match command sig %s",
                           parsed_arguments)
-
-            return exec_command(*parsed_arguments)
+            try:
+                return exec_command(*parsed_arguments)
+            except TypeError:
+                pass
 
         return self.__commandsNotFound(primary_command, parsed_arguments)

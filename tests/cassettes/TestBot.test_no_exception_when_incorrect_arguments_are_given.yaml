@@ -1,0 +1,93 @@
+interactions:
+- request:
+    body: null
+    headers:
+      User-Agent:
+      - Python/3.6.8 slack/2.0.0 Windows/10
+      authorization:
+      - REDACTED
+    method: POST
+    uri: https://www.slack.com/api/users.list
+  response:
+    body:
+      string: '{"ok":true,"members":[{"id":"USLACKBOT","team_id":"TNS8TBA3A","name":"slackbot","deleted":false,"color":"757575","real_name":"Slackbot","tz":null,"tz_label":"Pacific
+        Standard Time","tz_offset":-28800,"profile":{"title":"","phone":"","skype":"","real_name":"Slackbot","real_name_normalized":"Slackbot","display_name":"Slackbot","display_name_normalized":"Slackbot","fields":null,"status_text":"","status_emoji":"","status_expiration":0,"avatar_hash":"sv41d8cd98f0","always_active":true,"first_name":"slackbot","last_name":"","image_24":"https:\/\/a.slack-edge.com\/80588\/img\/slackbot_24.png","image_32":"https:\/\/a.slack-edge.com\/80588\/img\/slackbot_32.png","image_48":"https:\/\/a.slack-edge.com\/80588\/img\/slackbot_48.png","image_72":"https:\/\/a.slack-edge.com\/80588\/img\/slackbot_72.png","image_192":"https:\/\/a.slack-edge.com\/80588\/marketing\/img\/avatars\/slackbot\/avatar-slackbot.png","image_512":"https:\/\/a.slack-edge.com\/80588\/img\/slackbot_512.png","status_text_canonical":"","team":"TNS8TBA3A"},"is_admin":false,"is_owner":false,"is_primary_owner":false,"is_restricted":false,"is_ultra_restricted":false,"is_bot":false,"is_app_user":false,"updated":0},{"id":"UNEQ8J1V1","team_id":"TNS8TBA3A","name":"amcchesney","deleted":false,"color":"9f69e7","real_name":"amcchesney","tz":"America\/Chicago","tz_label":"Central
+        Standard Time","tz_offset":-21600,"profile":{"title":"","phone":"","skype":"","real_name":"amcchesney","real_name_normalized":"amcchesney","display_name":"","display_name_normalized":"","status_text":"","status_emoji":"","status_expiration":0,"avatar_hash":"ga69af37a928","email":"amcchesney@taos.com","image_24":"https:\/\/secure.gravatar.com\/avatar\/a69af37a928454b2ae89096bb62748e4.jpg?s=24&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0007-24.png","image_32":"https:\/\/secure.gravatar.com\/avatar\/a69af37a928454b2ae89096bb62748e4.jpg?s=32&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0007-32.png","image_48":"https:\/\/secure.gravatar.com\/avatar\/a69af37a928454b2ae89096bb62748e4.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0007-48.png","image_72":"https:\/\/secure.gravatar.com\/avatar\/a69af37a928454b2ae89096bb62748e4.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0007-72.png","image_192":"https:\/\/secure.gravatar.com\/avatar\/a69af37a928454b2ae89096bb62748e4.jpg?s=192&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0007-192.png","image_512":"https:\/\/secure.gravatar.com\/avatar\/a69af37a928454b2ae89096bb62748e4.jpg?s=512&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0007-512.png","status_text_canonical":"","team":"TNS8TBA3A"},"is_admin":true,"is_owner":true,"is_primary_owner":true,"is_restricted":false,"is_ultra_restricted":false,"is_bot":false,"is_app_user":false,"updated":1569504060},{"id":"UNRQQE9S8","team_id":"TNS8TBA3A","name":"devops_bot","deleted":false,"color":"4bbe2e","real_name":"Devops
+        Bot","tz":"America\/Los_Angeles","tz_label":"Pacific Standard Time","tz_offset":-28800,"profile":{"title":"","phone":"","skype":"","real_name":"Devops
+        Bot","real_name_normalized":"Devops Bot","display_name":"","display_name_normalized":"","status_text":"","status_emoji":"","status_expiration":0,"avatar_hash":"g53b76eaf3e4","api_app_id":"ANKRZLN7K","always_active":false,"bot_id":"BNEQEBA0K","image_24":"https:\/\/secure.gravatar.com\/avatar\/53b76eaf3e4215f281b2aac617d85ed4.jpg?s=24&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0000-24.png","image_32":"https:\/\/secure.gravatar.com\/avatar\/53b76eaf3e4215f281b2aac617d85ed4.jpg?s=32&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0000-32.png","image_48":"https:\/\/secure.gravatar.com\/avatar\/53b76eaf3e4215f281b2aac617d85ed4.jpg?s=48&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0000-48.png","image_72":"https:\/\/secure.gravatar.com\/avatar\/53b76eaf3e4215f281b2aac617d85ed4.jpg?s=72&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0000-72.png","image_192":"https:\/\/secure.gravatar.com\/avatar\/53b76eaf3e4215f281b2aac617d85ed4.jpg?s=192&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0000-192.png","image_512":"https:\/\/secure.gravatar.com\/avatar\/53b76eaf3e4215f281b2aac617d85ed4.jpg?s=512&d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0000-512.png","status_text_canonical":"","team":"TNS8TBA3A"},"is_admin":false,"is_owner":false,"is_primary_owner":false,"is_restricted":false,"is_ultra_restricted":false,"is_bot":true,"is_app_user":false,"updated":1569504305}],"cache_ts":1578678185,"response_metadata":{"next_cursor":""}}'
+    headers:
+      Access-Control-Allow-Headers: slack-route, x-slack-version-ts
+      Access-Control-Allow-Origin: '*'
+      Access-Control-Expose-Headers: x-slack-req-id, retry-after
+      Cache-Control: private, no-cache, no-store, must-revalidate
+      Connection: keep-alive
+      Content-Encoding: gzip
+      Content-Length: '964'
+      Content-Type: application/json; charset=utf-8
+      Date: Fri, 10 Jan 2020 17:43:05 GMT
+      Expires: Mon, 26 Jul 1997 05:00:00 GMT
+      Pragma: no-cache
+      Referrer-Policy: no-referrer
+      Server: Apache
+      Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+      Vary: Accept-Encoding
+      Via: 1.1 ddc22bd8b24a1e3aa7df54f2963944c2.cloudfront.net (CloudFront)
+      X-Accepted-OAuth-Scopes: users:read,read
+      X-Amz-Cf-Id: TogPITPcthgsrT_P553vI1m3OKsrW82tH8kQZrjyCj8XOTQGifg16w==
+      X-Amz-Cf-Pop: IAH50-C1
+      X-Cache: Miss from cloudfront
+      X-Content-Type-Options: nosniff
+      X-OAuth-Scopes: identify,bot:basic
+      X-Slack-Req-Id: 18ad9d317967be7d573ae118921ff44e
+      X-Via: haproxy-www-tghb
+      X-XSS-Protection: '0'
+    status:
+      code: 200
+      message: OK
+    url: https://www.slack.com/api/users.list
+- request:
+    body: null
+    headers:
+      User-Agent:
+      - Python/3.6.8 slack/2.0.0 Windows/10
+      authorization:
+      - REDACTED
+    method: POST
+    uri: https://www.slack.com/api/chat.postMessage
+  response:
+    body:
+      string: '{"ok":true,"channel":"CNFJ0A13M","ts":"1578678186.000600","message":{"bot_id":"BNEQEBA0K","type":"message","text":"<@SomeUser>:
+        \nSorry I don''t understand the command: `ping`. with the args of:  ` grw134
+        ` Currently Check Mk supports the following commands:\nping\nhelp\nget\nhost\ndowntime","user":"UNRQQE9S8","ts":"1578678186.000600","team":"TNS8TBA3A","bot_profile":{"id":"BNEQEBA0K","deleted":false,"name":"DevOps
+        Bot","updated":1569504305,"app_id":"ANKRZLN7K","icons":{"image_36":"https:\/\/a.slack-edge.com\/80588\/img\/plugins\/app\/bot_36.png","image_48":"https:\/\/a.slack-edge.com\/80588\/img\/plugins\/app\/bot_48.png","image_72":"https:\/\/a.slack-edge.com\/80588\/img\/plugins\/app\/service_72.png"},"team_id":"TNS8TBA3A"}},"warning":"missing_charset","response_metadata":{"warnings":["missing_charset"]}}'
+    headers:
+      Access-Control-Allow-Headers: slack-route, x-slack-version-ts
+      Access-Control-Allow-Origin: '*'
+      Access-Control-Expose-Headers: x-slack-req-id, retry-after
+      Cache-Control: private, no-cache, no-store, must-revalidate
+      Connection: keep-alive
+      Content-Encoding: gzip
+      Content-Length: '476'
+      Content-Type: application/json; charset=utf-8
+      Date: Fri, 10 Jan 2020 17:43:06 GMT
+      Expires: Mon, 26 Jul 1997 05:00:00 GMT
+      Pragma: no-cache
+      Referrer-Policy: no-referrer
+      Server: Apache
+      Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+      Vary: Accept-Encoding
+      Via: 1.1 95d3cb9f0154fc7208da9133aaec917a.cloudfront.net (CloudFront)
+      X-Accepted-OAuth-Scopes: chat:write:user,client
+      X-Amz-Cf-Id: JyIDdgJN9TOaF3HGm9ER1vNz_cCafVCsncmwGRytAirpkq15iYgllQ==
+      X-Amz-Cf-Pop: IAH50-C1
+      X-Cache: Miss from cloudfront
+      X-Content-Type-Options: nosniff
+      X-OAuth-Scopes: identify,bot:basic
+      X-Slack-Req-Id: 7d5d6c6656227d0a750aa4332e124d1d
+      X-Via: haproxy-www-y09a
+      X-XSS-Protection: '0'
+    status:
+      code: 200
+      message: OK
+    url: https://www.slack.com/api/chat.postMessage
+version: 1
