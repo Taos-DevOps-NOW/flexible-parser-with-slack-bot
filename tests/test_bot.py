@@ -18,7 +18,7 @@ class TestBot():
             "command": "cmk ping grw134",
             "channel": "#monitoring",
         }
-        bot = Bot()
+        bot = Bot(bot_name="devops_bot")
         bot.event.handle_event(
             data["user"],
             data["command"],
